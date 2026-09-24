@@ -1,0 +1,19 @@
+{
+  "tie_key": "tie",
+  "replicas": [
+    [
+      {"op": "set", "key": "a", "value": "a1", "clock": 1},
+      {"op": "set", "key": "tie", "value": "from-1", "clock": 5},
+      {"op": "set", "key": "gone", "value": "g1", "clock": 1}
+    ],
+    [
+      {"op": "set", "key": "a", "value": "a2", "clock": 2},
+      {"op": "set", "key": "b", "value": "b1", "clock": 1},
+      {"op": "set", "key": "tie", "value": "from-2", "clock": 5}
+    ],
+    [
+      {"op": "remove", "key": "gone", "clock": 3},
+      {"op": "set", "key": "b", "value": "b2", "clock": 4}
+    ]
+  ]
+}
